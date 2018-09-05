@@ -8,12 +8,11 @@ city = raw_input('Please  enter city name:')
 #banner design
 print('*'*80)
 print('Created by Pierce2r').center(80)
-print('Weather-Mapper Version 2.0').center(80)
+print('Version 2.0').center(80)
 print('*'*80)
 print('[*] Finding weather details for ' + city+ '...')
 
-api_key='*********' # put your api here
-url= 'http://api.openweathermap.org/data/2.5/weather?q='+str(city)+'&appid='+str(api_key)
+url= 'http://api.openweathermap.org/data/2.5/weather?q='+str(city)+'&appid=-------' #replace -------- with your own api key
 
 json_data=requests.get(url).json()
 try:
@@ -44,5 +43,4 @@ try:
 
 except KeyboardInterrupt:
 	print('exitting....')
-
 
