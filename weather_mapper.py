@@ -1,8 +1,21 @@
-import json
-import requests
-import datetime
-from playsound import playsound
-from gtts import gTTS
+try:
+	import json
+	import requests
+	import sys
+	import datetime
+	from playsound import playsound
+	from gtts import gTTS
+
+	
+except:
+	print('Package Missen. Now installing...')
+	import os
+	os.system('pip install playsound')
+	os.system('pip install gTTS')
+	sys.exit
+
+
+
 
 city = raw_input('Please  enter city name:')
 #banner design
